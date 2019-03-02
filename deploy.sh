@@ -1,6 +1,6 @@
-docker container build stozuka/multi-client:latest -t stozuka/multi-client:$SHA -f ./client/Dockerfile.dev ./client
-docker container build stozuka/multi-server:latest -t stozuka/multi-server:$SHA -f ./server/Dockerfile.dev ./server
-docker container build stozuka/multi-worker:latest -t stozuka/multi-worker:$SHA -f ./worker/Dockerfile.dev ./worker
+docker container build -t stozuka/multi-client:latest -t stozuka/multi-client:$SHA -f ./client/Dockerfile.dev ./client
+docker container build -t stozuka/multi-server:latest -t stozuka/multi-server:$SHA -f ./server/Dockerfile.dev ./server
+docker container build -t stozuka/multi-worker:latest -t stozuka/multi-worker:$SHA -f ./worker/Dockerfile.dev ./worker
 docker push stozuka/multi-client:latest
 docker push stozuka/multi-server:latest
 docker push stozuka/multi-worker:latest
